@@ -1,2 +1,5 @@
+project (book_lib) 
+add_library (book_lib src/book_class.cpp)
 project (project2)
 add_executable (project2 src/main.cpp)
+target_link_libraries (project2 book_lib)

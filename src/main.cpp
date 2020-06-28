@@ -1,50 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "book_class.hpp"
 
-
-struct autor {
-	std::string firstName;
-	std::string secondName;
-};
-
-enum Mounth {
-	Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-};
-
-struct Page {
-	std::string content;
-};
-
-struct date {
-	int day;
-	Mounth mounth;
-	int year;
-};
-
-struct book {
-	book() {
-		pageCount_ = 0;
-		date_.day = 1;
-		date_.mounth = Mounth::Jan;
-		date_.year = 2000;
-	}
-
-	// fields
-	int pageCount_;
-	autor autor_;
-	date date_;
-	std::vector<Page> pages_;
-	// methods
-	Page getPage(int pageNumber) {
-		return pages_[pageNumber];
-	}
-
-	void addPage(Page p) {
-		pages_.push_back(p);
-		pageCount_++;
-	};
-};
 
 int main () {
 	std::cout << "Hello World" << std::endl;
