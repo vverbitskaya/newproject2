@@ -3,8 +3,16 @@
 #include <vector>
 #include "book_class.hpp"
 
+#include <opencv2/core.hpp>
+#include <opencv2/highgui.hpp>
 
 int main () {
+
+	cv::Mat picture(500, 300, CV_8UC3, cv::Scalar(0, 100, 250));
+	cv::imshow("my picture", picture);
+	cv::waitKey(0);
+	return 0;
+
 	std::cout << "Hello World" << std::endl;
 
 	book b;
